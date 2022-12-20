@@ -95,7 +95,7 @@ body {
 }
 
 .quote-box:hover {
-    background: hsl(232, 17%, 35%, .8);
+    background: hsla(232, 17%, 35%, 0.8);
     color: #fff;
 }
 
@@ -112,6 +112,44 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.new-quote {
+    width: fit-content;
+    justify-self: center;
+    background: #4a4e68;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.new-quote:hover {
+    background: #CBCEED;
+    color: #4A4E68;
+    border: 2px solid #4A4E68;
+}
+
+.new-quote:active {
+    outline: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 0 1px 3px 0 inset;
+    background: #6A4648;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.new-quote i {
+    transition: transform 0.5s linear;
+}
+
+.new-quote:hover i {
+    transform: rotate(360deg);
 }
 
 /*
