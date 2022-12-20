@@ -29,3 +29,16 @@ document.querySelector(".container").style.background =
   "url('https://source.unsplash.com/random/?Landscape&" +
   randomId +
   "') center/cover no-repeat";
+
+// Quote changer
+
+const quoteEl = document.querySelector(".quote-text");
+const authorEl = document.querySelector(".quote-author");
+
+function randomQuote() {
+  let randomIndex = Math.floor(Math.random() * quotes.length);
+  quoteEl.textContent = quotes[randomIndex].quote;
+  authorEl.textContent = quotes[randomIndex].author;
+}
+
+randomQuote();
