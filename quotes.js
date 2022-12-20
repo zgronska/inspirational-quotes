@@ -22,3 +22,10 @@ const quotes = [
     author: "Justin Bieber",
   },
 ];
+
+// Background changer
+let randomId = Math.floor(Math.random() * 10000000);
+document.querySelector(".container").style.background =
+  "url('https://source.unsplash.com/random/?Landscape&" +
+  randomId +
+  "') center/cover no-repeat";

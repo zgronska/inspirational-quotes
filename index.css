@@ -54,8 +54,70 @@ h6 {
   Basic styling
 */
 
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: 'Inter', sans-serif;
+    display: grid;
+    place-content: center;
+    background-color: #f2e9e4;
+}
+
+.container {
+    min-height: 45rem;
+    display: grid;
+    place-content: center;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 0.5rem solid #fff;
+    box-shadow: 0.3px 0.5px 0.6px hsl(22deg 12% 58% / 0.5),
+        0.7px 1.3px 1.5px -1.1px hsl(22deg 12% 58% / 0.43),
+        1.9px 3.8px 4.2px -2.3px hsl(22deg 12% 58% / 0.36),
+        5px 10px 11px -3.4px hsl(22deg 12% 58% / 0.29);
+}
+
+.quote-box {
+    background: hsl(0, 0%, 100%, .8);
+    padding: 1.75rem;
+    max-width: 30rem;
+    overflow-y: scroll;
+    font-size: 1rem;
+}
+
+.quote-author {
+    font-weight: 600;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.quote-author::before {
+    content: '- ';
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*
+  Responsive layout
+*/
+
+@media screen and (min-width: 45rem) {
+    .container {
+        min-width: 45rem;
+        min-height: 30rem;
+    }
+
+    .quote-box {
+        font-size: 1.25rem;
+    }
 }
